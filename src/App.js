@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {useState} from 'react'
+import input from './components/input';
 function App() {
+  //I want the state to live here, and i want to pass 
+  //the state down to the child component
+  //i want another child component to update the state
+
+  const [state, setState] = useState[""];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input />
     </div>
   );
 }
